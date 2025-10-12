@@ -84,11 +84,11 @@ git clone https://github.com/iamskyline49/cafe-management.git
 
 Import with MySQL command-line (adjust path & credentials if needed):
 
-````powershell
+`````powershell
 # create the database
 mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS cafe;"
 
-Use phpMyAdmin: open `http://localhost/phpmyadmin`, create `cafe`, then import `sql.txt`.
+Use phpMyAdmin: open `http://localhost/phpmyadmin`, create `cafe`.
 
 4. Ensure upload directories exist and are writable by the web server:
 
@@ -96,9 +96,6 @@ Use phpMyAdmin: open `http://localhost/phpmyadmin`, create `cafe`, then import `
 New-Item -Path .\resources\uploads\products -ItemType Directory -Force
 New-Item -Path .\resources\uploads\users -ItemType Directory -Force
 
-# Grant write permissions (Windows):
-icacls .\resources\uploads /grant "IIS_IUSRS:(OI)(CI)F" /T || icacls .\resources\uploads /grant "Users:(OI)(CI)F" /T
-````
 
 5. Update database credentials: edit `db\config.php` and set your host, user, password, and database name.
 
@@ -229,7 +226,7 @@ $DB_USER = 'root';
 $DB_PASS = '';
 $DB_NAME = 'cafe';
 ?>
-````
+`````
 
 The application uses this configuration to create a mysqli/PDO connection in `db/db_connection.php`.
 
