@@ -154,18 +154,6 @@ Email: customer@cafe.com
 Password: 123456
 ```
 
----
-
-## Screenshots
-
-Create a folder named `screenshots/` and add:
-
-```md
-![Landing Page](screenshots/landing-page.png)
-![Admin Dashboard](screenshots/admin-dashboard.png)
-![Customer Menu](screenshots/customer-menu.png)
-![Cart Page](screenshots/cart.png)
-```
 
 ---
 
